@@ -1,0 +1,37 @@
+{
+  "name": "genpark-multimodal-visual-hallucination-verifier-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multimodal visual hallucination verifier cross-checking vision model claims against ground-truth OCR and bounding box metadata.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "vision-agent",
+  "tags": [
+    "visual-hallucination",
+    "multimodal-eval",
+    "vision-grounding",
+    "ocr-verification",
+    "computer-use"
+  ],
+  "inputs": {
+    "agent_visual_claim": {
+      "type": "string",
+      "default": "Primary CTA button is neon green"
+    }
+  },
+  "outputs": {
+    "verification_id": {
+      "type": "string"
+    },
+    "visual_grounding_score": {
+      "type": "number"
+    },
+    "hallucination_detected": {
+      "type": "boolean"
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
